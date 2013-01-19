@@ -364,7 +364,7 @@ def formatResult(result):
     chunk_spelling = chunk.spelling
 
     if chunk.isKindTypedText():
-      abbr = chunk_spelling
+      abbr += chunk_spelling
 
     chunk_len = len(chunk_spelling)
     if chunk.isKindPlaceHolder():
