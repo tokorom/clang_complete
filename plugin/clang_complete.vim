@@ -168,15 +168,15 @@ function! s:ClangCompleteInit()
     let g:clang_use_library = l:initialized
   endif
 
-  if g:clang_use_library != 1
-    echoe 'clang_complete: Not using libclang is deprecated,'
-    echoe 'You should switch to libclang now and report all the bugs.'
+  "if g:clang_use_library != 1
+    "echoe 'clang_complete: Not using libclang is deprecated,'
+    "echoe 'You should switch to libclang now and report all the bugs.'
 
-    if g:clang_compilation_database != ''
-      echoe 'The use of the compile_commands.json file is only available'
-      echoe 'when using libclang.'
-    endif
-  endif
+    "if g:clang_compilation_database != ''
+      "echoe 'The use of the compile_commands.json file is only available'
+      "echoe 'when using libclang.'
+    "endif
+  "endif
 
 endfunction
 
@@ -474,9 +474,9 @@ function! s:ClangCompleteBinary(base)
   call delete(l:tempfile)
 
   call s:ClangQuickFix(l:clang_output, l:tempfile)
-  if v:shell_error
-    return []
-  endif
+  "if v:shell_error
+    "return []
+  "endif
   if l:clang_output == []
     return []
   endif
