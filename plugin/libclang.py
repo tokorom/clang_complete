@@ -382,7 +382,7 @@ def formatResult(result):
     chunk_spelling = chunk.spelling
 
     if chunk.isKindTypedText():
-      abbr = chunk_spelling
+      abbr += chunk_spelling
 
     if chunk.isKindPlaceHolder():
       word += snippetsFormatPlaceHolder(chunk_spelling)
